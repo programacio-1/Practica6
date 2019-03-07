@@ -45,7 +45,14 @@ public class Apartado030101 extends Apartado {
 		alumno.asignarNota(nota);
 		System.out.println(alumno);
 		//Inicio modificacion
-		
+		if (alumno.obtenerNota()<=5.0)
+		{
+			System.out.println("El alumno debe recuperar");
+		}
+		else
+		{
+			System.out.println("El alumno ha aprobado");
+		}
 		
 		// Fin modificacion
 	}
@@ -63,9 +70,18 @@ public class Apartado030101 extends Apartado {
 		cabecera("02", "");
 
 		// Inicio modificacion
-		
-		
-		// Fin modificacion
+		Alumno alumno =new Alumno("1000011111","Juan");
+		System.out.println(alumno);
+		float nota = Teclado.readFloat();
+		if (nota<5.0)
+		{
+			System.out.println("El alumno debe recuperar");
+		}
+		else
+		{
+			System.out.println("El alumno ha aprobado");
+		}
+		// Fin modificacion	
 	}
 
 	/**
@@ -82,7 +98,25 @@ public class Apartado030101 extends Apartado {
 		cabecera("03", "");
 
 		// Inicio modificacion
-		
+		Alumno alumno =new Alumno("1000011111","Juan");
+		System.out.println(alumno);
+		float nota = Teclado.readFloat();
+		if (Float.MIN_VALUE!=nota)
+		{
+					
+			if (nota<5.0)
+			{
+				System.out.println("El alumno debe recuperar");
+			}
+			else
+			{
+				System.out.println("El alumno ha aprobado");
+			}
+		}
+		else
+		{
+		System.out.println("Los datos que se muestran a continuacion no son correctos");
+		}
 		// Fin modificacion
 		System.out.println("Fin del ejercicio03");
 	}
@@ -148,17 +182,14 @@ public class Apartado030101 extends Apartado {
 
 
 		// Inicio modificacion
-		/* -- Quitar comentarios
 		if (nota1 >=5)
-           sumaNotas=nota1;
-           if (nota2>=5)
-             sumaNotas=sumaNotas + nota2;
-             if (nota3>=5)
+		sumaNotas=nota1;
+		if (nota2>=5)
+		sumaNotas=sumaNotas + nota2;
+		if (nota3>=5)
                 sumaNotas=sumaNotas + nota3;
                 media=sumaNotas/3;
-               
-       }
-       */
+       
 	   // Fin modificacion
 		
       
@@ -179,6 +210,27 @@ public class Apartado030101 extends Apartado {
 		cabecera("06", "");
 
 		// Inicio modificacion
+		Alumno alumno =new Alumno("1000011111","Juan");
+		int nota1=0, nota2=0, nota3=0, sumaNotas=0;
+		float media=0;
+       
+		System.out.println("Introduce la nota del primer examen:");
+		nota1=Teclado.readInteger();
+
+		System.out.println("Introduce la nota del segundo examen:");
+		nota2=Teclado.readInteger();
+
+		System.out.println("Introduce la nota del tercer examen:");
+		nota3=Teclado.readInteger();
+
+		if ((nota1>=5) && (nota2>=5) && (nota3>=5))
+		sumaNotas=nota1+nota2+nota3;              
+		media=sumaNotas/3;
+		
+      
+       alumno.asignarNota(media);
+	
+       System.out.println(alumno);
 		// Fin modificacion
 	}
 

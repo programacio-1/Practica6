@@ -1,10 +1,12 @@
 Practica P-CTL
 
-Alumno:
+Alumno: Sergio Casado Fernandez
 
-Horas dedicadas:
+Horas dedicadas: 1h 30 min
 
 Problemas surgidos al realizar la practica:
 
 Respuestas a la preguntas:
 
+Apartado 030101 ejercicio 04.
+	E
