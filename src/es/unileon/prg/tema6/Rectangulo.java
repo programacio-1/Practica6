@@ -37,9 +37,10 @@ public class Rectangulo {
 	 */
 	public Rectangulo(int base, int altura) {
 		//Inicio modificacion ejercicio07
-		
-		
-		
+		if (base<0 && altura<0){
+			base=0;
+			altura=0;
+		}
 		//Fin modificacion ejercicio07		
 	}
 	
@@ -70,9 +71,8 @@ public class Rectangulo {
 	 */
 	public void setBase(int base){
 		//Inicio modificacion ejercicio07
-		
-		
-		
+		if (base>0)
+		setBase(Teclado.readInteger());
 		//Fin modificacion ejercicio07			
 	}
 	
@@ -84,9 +84,9 @@ public class Rectangulo {
 	 */
 	public void setAltura(int altura){
 		//Inicio modificacion ejercicio07
-		
-		
-		
+		int nuevoAltura = Teclado.readInteger();
+		if (altura>0)
+		setAltura(nuevoAltura);
 		//Fin modificacion ejercicio07		
 	}
 	
@@ -102,9 +102,10 @@ public class Rectangulo {
 	public boolean esUnCuadrado(){
 		boolean esUnCuadrado=false;
 		//Inicio modificacion ejercicio07
-		
-		
-		
+		int base= Teclado.readInteger();
+		int altura=Teclado.readInteger();
+		if ((base==altura) && ((base!=0) && (altura!=0)))
+		esUnCuadrado=true;
 		//Fin modificacion ejercicio07
 		return esUnCuadrado;
 		

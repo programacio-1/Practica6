@@ -31,10 +31,17 @@ public class Apartado030102 extends Apartado {
 		Rectangulo rectangulo=new Rectangulo(10,5);
 		System.out.println("Introduce una opcion (1 - Area, 2 - Perimetro):");
 		// Inicio modificacion
-        
-		
+        	/*int opcion = Teclado.readInteger();
+		if (opcion==1){
+			int area=getBase*getAltura;
+			System.out.println("El area del rectangulo es " + area);
+		}
+		if (opcion==2){
+			int perimetro=(Rectangulo.base*2)+(Rectangulo.altura*2);
+			System.out.println("El preimetro del rectangulo es " + perimetro);
+		}
 		// Fin modificacion
-	}
+	*/}
 
 	/**
 	 * Instruccion if-else - Ejercicio2.
@@ -47,7 +54,15 @@ public class Apartado030102 extends Apartado {
 	public void ejercicio02() {
 		cabecera("02", "");
 		// Inicio modificacion
-		
+		System.out.println("Introduzca un año");
+		int anio = Teclado.readInteger();
+		int resto = anio%400;
+		int resto2 = anio%4;
+		int resto3 = anio%100;
+		if ((resto == 0) || ((resto2 == 0) && (resto3 != 0)))
+		System.out.println("El año es bisiesto");
+		else 
+		System.out.println("El año no es bisiesto");
 		// Fin modificacion
 	}
 

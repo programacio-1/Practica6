@@ -71,8 +71,9 @@ public class Apartado030101 extends Apartado {
 
 		// Inicio modificacion
 		Alumno alumno =new Alumno("1000011111","Juan");
-		System.out.println(alumno);
+		System.out.println("Introduzca la nota del alumno");
 		float nota = Teclado.readFloat();
+		alumno.asignarNota(nota);
 		if (nota<5.0)
 		{
 			System.out.println("El alumno debe recuperar");
@@ -81,6 +82,7 @@ public class Apartado030101 extends Apartado {
 		{
 			System.out.println("El alumno ha aprobado");
 		}
+		System.out.println(alumno);
 		// Fin modificacion	
 	}
 
@@ -99,8 +101,9 @@ public class Apartado030101 extends Apartado {
 
 		// Inicio modificacion
 		Alumno alumno =new Alumno("1000011111","Juan");
-		System.out.println(alumno);
+		System.out.println("Introduzca la nota del alumno");
 		float nota = Teclado.readFloat();
+		alumno.asignarNota(nota);
 		if (Float.MIN_VALUE!=nota)
 		{
 					
@@ -115,8 +118,10 @@ public class Apartado030101 extends Apartado {
 		}
 		else
 		{
-		System.out.println("Los datos que se muestran a continuacion no son correctos");
+			System.out.println("Los datos que se muestran a continuacion no son correctos");
+			alumno.asignarNota(0);
 		}
+		System.out.println(alumno);
 		// Fin modificacion
 		System.out.println("Fin del ejercicio03");
 	}
@@ -223,11 +228,22 @@ public class Apartado030101 extends Apartado {
 		System.out.println("Introduce la nota del tercer examen:");
 		nota3=Teclado.readInteger();
 
-		if ((nota1>=5) && (nota2>=5) && (nota3>=5))
-		sumaNotas=nota1+nota2+nota3;              
+		if ((nota1>=5) || (nota2>=5) || (nota3>=5)){			if ((nota1>=5) || (nota2>=5) || (nota3<5)){
+				if (nota1<5){
+					nota1=0;
+				}
+				if (nota2<5){
+					nota2=0;
+				}
+				if (nota3<5){
+					nota3=0;
+				}
+				sumaNotas=nota1+nota2+nota3;
+			}
+			sumaNotas=nota1+nota2+nota3;
+		}
 		media=sumaNotas/3;
-		
-      
+			
        alumno.asignarNota(media);
 	
        System.out.println(alumno);
@@ -282,7 +298,6 @@ public class Apartado030101 extends Apartado {
 		Rectangulo rectangulo= new Rectangulo(base,altura);
 		// Inicio modificacion
 		
-		
 		// Fin modificacion
 	}
 
@@ -298,8 +313,19 @@ public class Apartado030101 extends Apartado {
 		cabecera("08", "");
 
 		// Inicio modificacion
-		
-		
+		System.out.println("Introduce el primer numero");
+		int num1 = Teclado.readInteger();
+		System.out.println("Introduce el segundo numero");
+		int num2 = Teclado.readInteger();
+		int num3 =num2;
+		System.out.println("El primer numero es " + num1);
+		System.out.println("El segundo numero es " + num2);
+		if (num1>num2){
+			num2=num1;
+			num1=num3;
+			System.out.println("Ahora el primer numero es " +num1);
+			System.out.println("Ahora el segundo numero es " + num2);
+		}
 		// Fin modificacion
 	}
 

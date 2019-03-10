@@ -2,11 +2,21 @@ Practica P-CTL
 
 Alumno: Sergio Casado Fernandez
 
-Horas dedicadas: 1h 30 min
+Horas dedicadas: 2h
 
 Problemas surgidos al realizar la practica:
 
 Respuestas a la preguntas:
 
 Apartado 030101 ejercicio 04.
-	E
+	Como a es true y b es false la sentencia (!a && b) queda false ya que !a es lo contrario de a por lo tanto es false y && es el equivalente al "y" logico, "false y false = false".
+	En la segunda sentencia como n2 es mayor que n1 ya que 8>5 daria true pero al tener el negador delante se convierte en false.
+	El "o" logico que representa || hace que el primer if no sea true pues "false o false = false"  
+
+	Como a es true y b es false la sentencia (!a || b) es false pues dice "false o false = false".
+	En la segunda sentencia como n1 no es mayor que n2 ya que 5<8 quedaria un false pero al tener delante un negador este false se convierte en true.
+	El resultado final seria "false o true" u eso es true, por eso por pantalla se muestra el Resultado 2.
+
+	Como n1 no es mayor o igual que n2 la primera sentencia es false.
+	La segunda parte es true porque "true o false = true".
+	El resultado es false ya que "false y true = false".
