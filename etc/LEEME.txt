@@ -2,7 +2,7 @@ Practica P-CTL
 
 Alumno: Sergio Casado Fernandez
 
-Horas dedicadas: 2h
+Horas dedicadas: 4h 30 min
 
 Problemas surgidos al realizar la practica:
 
@@ -20,3 +20,9 @@ Apartado 030101 ejercicio 04.
 	Como n1 no es mayor o igual que n2 la primera sentencia es false.
 	La segunda parte es true porque "true o false = true".
 	El resultado es false ya que "false y true = false".
+
+Apartado 030101 ejercicio 09.
+	El programa no compara dos tipos basicos de datos sino dos objetos por lo que realmente esta comparando las direcciones de memoria de dos objetos, por eso muestra que N1 y N2 son distintos.
+
+Apartado 030101 ejercicio 10.
+	

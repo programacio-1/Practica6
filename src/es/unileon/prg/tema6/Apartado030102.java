@@ -31,17 +31,19 @@ public class Apartado030102 extends Apartado {
 		Rectangulo rectangulo=new Rectangulo(10,5);
 		System.out.println("Introduce una opcion (1 - Area, 2 - Perimetro):");
 		// Inicio modificacion
-        	/*int opcion = Teclado.readInteger();
+		int base = Teclado.readInteger();
+		int altura = Teclado.readInteger();
+        	int opcion = Teclado.readInteger();
 		if (opcion==1){
-			int area=getBase*getAltura;
+			int area=rectangulo.getBase()*rectangulo.getAltura();
 			System.out.println("El area del rectangulo es " + area);
 		}
 		if (opcion==2){
-			int perimetro=(Rectangulo.base*2)+(Rectangulo.altura*2);
+			int perimetro=(rectangulo.getBase()*2)+(rectangulo.getAltura()*2);
 			System.out.println("El preimetro del rectangulo es " + perimetro);
 		}
 		// Fin modificacion
-	*/}
+	}
 
 	/**
 	 * Instruccion if-else - Ejercicio2.
@@ -96,8 +98,8 @@ public class Apartado030102 extends Apartado {
         NumeroEntero n1 = new NumeroEntero(10);
         NumeroEntero n2 = new NumeroEntero(10);
         
-        /* -- Quitar comentarios
-        if (n1 > n2){
+        
+        /*if (n1 > n2){
         	 System.out.println("N1-> "+n1);
              System.out.println("N1 es mayor que N2");
         }
@@ -108,9 +110,8 @@ public class Apartado030102 extends Apartado {
         else
            System.out.println("N1 y N2 son iguales -> N1 ->"+n1+" N2 -> "+n2);
 		
-		*/
 		// Fin modificacion
-		
+	*/	
 	}
 
 	/**
@@ -133,10 +134,46 @@ public class Apartado030102 extends Apartado {
 		cabecera("04", "");
 
 		// Inicio modificacion
-		
-		
-		
-        // Fin modificacion
+		System.out.println("Introduce un numero:");
+		int Num1=Teclado.readInteger();
+		System.out.println("Introduce otro numero:");
+		int Num2=Teclado.readInteger();
+
+		System.out.println("1 - Sumar: Se mostrara por pantalla la suma de los numeros");
+		System.out.println("2 - Multiplicar: Se mostrara por pantalla la multiplicacion de los dos numeros");
+		System.out.println("3 - Divisores: Se mostrara por pantalla: si el primero es divisor del segundo, si el segundo es divisor del primero o si ninguno es divisor del otro");
+
+		int opcion = Teclado.readInteger();
+
+		if ((opcion == 1) || (opcion == 2) || (opcion==3)){
+			if (opcion == 1){
+				int suma=0;
+				suma=Num1+Num2;
+				System.out.println("La suma es: " + suma);
+			}
+			if (opcion == 2){
+				int multi=0;
+				multi=Num1*Num2;
+				System.out.println("La multiplicacion es: " + multi);
+			}
+			if (opcion == 3){
+				if ((Num1%Num2==0) || (Num2%Num1==0)){
+					if (Num2%Num1==0){
+						System.out.println("El primer numero es divisor del segundo");
+					}
+					if (Num1%Num2==0){
+						System.out.println("El segundo numero es divisor del primero");
+					}
+				}
+				else{
+					System.out.println("No son divisores entre si");
+				}
+			}
+		}
+		else{
+			System.out.println("Opcion incorrecta");
+		}
+        	// Fin modificacion
 	}
 
 	/**
