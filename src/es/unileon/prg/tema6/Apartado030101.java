@@ -228,21 +228,10 @@ public class Apartado030101 extends Apartado {
 		System.out.println("Introduce la nota del tercer examen:");
 		nota3=Teclado.readInteger();
 
-		if ((nota1>=5) || (nota2>=5) || (nota3>=5)){			if ((nota1>=5) || (nota2>=5) || (nota3<5)){
-				if (nota1<5){
-					nota1=0;
-				}
-				if (nota2<5){
-					nota2=0;
-				}
-				if (nota3<5){
-					nota3=0;
-				}
-				sumaNotas=nota1+nota2+nota3;
-			}
+		if ((nota1>=5) && (nota2>=5) && (nota3>=5)){
 			sumaNotas=nota1+nota2+nota3;
+			media = sumaNotas/3;
 		}
-		media=sumaNotas/3;
 			
        alumno.asignarNota(media);
 	
