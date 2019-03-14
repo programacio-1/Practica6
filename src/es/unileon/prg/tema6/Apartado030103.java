@@ -28,6 +28,35 @@ public class Apartado030103 extends Apartado {
 		cabecera("01","");
 
 		// Inicio modificacion
+		System.out.println("Introduce una nota");
+		int nota;
+		nota=Teclado.readInteger();
+		switch (nota){
+			case 1: //next
+			case 2: //next
+			case 3: //next
+			case 4: 
+				System.out.println("Insuficiente");
+				break;
+			case 5:
+				System.out.println("Suficiente");
+				break;
+			case 6:
+				System.out.println("Bien");
+				break;
+			case 7: //next
+			case 8:
+				System.out.println("Notable");
+				break;
+			case 9:
+				System.out.println("Sobresaliente");
+				break;
+			case 10:
+				System.out.println("Matricula");
+				break;
+			default:
+				System.out.println("Nota no valida");
+		}
         // Fin modificacion
 	}
 
@@ -43,6 +72,29 @@ public class Apartado030103 extends Apartado {
 		cabecera("02", "");
 
 		// Inicio modificacion
+		System.out.println("Introduce un digito");
+		int numero;
+		numero=Teclado.readInteger();
+		switch (numero){
+			case 0: //next
+			case 6: //next
+			case 9:
+				System.out.println("1 anillo");
+				break;
+			case 8:
+				System.out.println("2 anillos");
+				break;
+			case 1: //next
+			case 2: //next
+			case 3: //next
+			case 4: //next
+			case 5: //next
+			case 7:
+				System.out.println("0 anillos");
+				break;
+			default:
+				System.out.println("Digito no valido");
+		}
 		// Fin modificacion
 	}
 
@@ -57,6 +109,43 @@ public class Apartado030103 extends Apartado {
 		cabecera("03", "");
 
 		// Inicio modificacion
+		System.out.println("Introduce un numero:");
+		int Num1=Teclado.readInteger();
+		System.out.println("Introduce otro numero:");
+		int Num2=Teclado.readInteger();
+
+		System.out.println("1 - Sumar: Se mostrara por pantalla la suma de los numeros");
+		System.out.println("2 - Multiplicar: Se mostrara por pantalla la multiplicacion de los dos numeros");
+		System.out.println("3 - Divisores: Se mostrara por pantalla: si el primero es divisor del segundo, si el segundo es divisor del primero o si ninguno es divisor del otro");
+
+		int opcion=Teclado.readInteger();
+		switch (opcion){
+			case 1:
+				int suma=0;
+				suma=Num1+Num2;
+				System.out.println("La suma es: " + suma);
+				break;
+			case 2:
+				int multi=0;
+				multi=Num1*Num2;
+				System.out.println("La multiplicacion es: " + multi);
+				break;
+			case 3:
+				if ((Num1%Num2==0) || (Num2%Num1==0)){
+					if (Num2%Num1==0){
+						System.out.println("El primer numero es divisor del segundo");
+					}
+					if (Num1%Num2==0){
+						System.out.println("El segundo numero es divisor del primero");
+					}
+				}
+				else{
+					System.out.println("No son divisores entre si");
+				}
+			default:
+				System.out.println("Opcion no valida");
+		}
+				
 		// Fin modificacion
 	}
 
@@ -72,6 +161,19 @@ public class Apartado030103 extends Apartado {
 		cabecera("04", "");
 
 		// Inicio modificacion
+		System.out.println("Introduce una cadena de caracteres");
+		String cadena=Teclado.readInteger();
+		char caracter=cadena.substring(0,1);
+		int caso;
+		if (Character.isLowerCase(caracter)){
+			caso=1;
+		}
+		if (Character.isUpperCase(caracter)){
+			caso=2;
+		}
+		//if ()
+		//switch (casos)
+		//	case 1: 
 		// Fin modificacion
 	}
 }

@@ -2,7 +2,7 @@ Practica P-CTL
 
 Alumno: Sergio Casado Fernandez
 
-Horas dedicadas: 4h 30 min
+Horas dedicadas: 6h 
 
 Problemas surgidos al realizar la practica:
 
@@ -25,4 +25,5 @@ Apartado 030101 ejercicio 09.
 	El programa no compara dos tipos basicos de datos sino dos objetos por lo que realmente esta comparando las direcciones de memoria de dos objetos, por eso muestra que N1 y N2 son distintos.
 
 Apartado 030101 ejercicio 10.
+	Al compilar la primera vez no funciona ya 
 	
