@@ -30,20 +30,20 @@ public class Apartado030102 extends Apartado {
 
 		Rectangulo rectangulo=new Rectangulo(10,5);
 		System.out.println("Introduce una opcion (1 - Area, 2 - Perimetro):");
-		// Inicio modificacion
-		int base = Teclado.readInteger();
-		int altura = Teclado.readInteger();
-        	int opcion = Teclado.readInteger();
+		/* Inicio modificacion
+		int opcion = Teclado.readInteger();
+		int base = Rectangulo.getBase;
+		int altura = Rectangulo.getAltura;
 		if (opcion==1){
-			int area=rectangulo.getBase()*rectangulo.getAltura();
+			int area=base*altura;
 			System.out.println("El area del rectangulo es " + area);
 		}
 		if (opcion==2){
-			int perimetro=(rectangulo.getBase()*2)+(rectangulo.getAltura()*2);
+			int perimetro=(base*2)+(altura*2);
 			System.out.println("El preimetro del rectangulo es " + perimetro);
 		}
 		// Fin modificacion
-	}
+	*/}
 
 	/**
 	 * Instruccion if-else - Ejercicio2.
@@ -195,12 +195,20 @@ public class Apartado030102 extends Apartado {
 	public void ejercicio05() {
 		cabecera("05","");
 
-		int a=2, b=5, c=1; //Modificar los valores para realizar pruebas o leerlos por teclado
+		int a, b, c; //Modificar los valores para realizar pruebas o leerlos por teclado
 		
-		// Ecuacion2Grado ecuacion=new Ecuacion2Grado(a,b,c);
-		// Inicio modificacion
-        // Fin modificacion
-	}
+		/* Inicio modificacion
+		System.out.println("Introduce el primer coeficiente de la x");
+		a=Teclado.readInteger();
+		System.out.println("Introduce el segundo coeficiente de la x");
+		b=Teclado.readInteger();
+		System.out.println("Introduce el termino independiente");
+		c=Teclado.readInteger();
+
+		Ecuacion2Grado ecuacion=new Ecuacion2Grado(a,b,c);
+
+       		// Fin modificacion
+	*/}
 
 	/**
 	 * Instruccion if-else - Ejercicio6.

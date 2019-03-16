@@ -162,18 +162,37 @@ public class Apartado030103 extends Apartado {
 
 		// Inicio modificacion
 		System.out.println("Introduce una cadena de caracteres");
-		String cadena=Teclado.readInteger();
-		char caracter=cadena.substring(0,1);
-		int caso;
-		if (Character.isLowerCase(caracter)){
-			caso=1;
+		String cadena=Teclado.readString();
+		char caracter=cadena.charAt(0);
+		boolean vocal;
+		int comparador=0;
+		if (caracter=='a' || caracter=='e' || caracter=='i' || caracter=='o' || caracter=='u' || caracter=='A' || caracter=='E' || caracter=='I' || caracter=='O' || caracter=='U'){
+			comparador=1;
 		}
-		if (Character.isUpperCase(caracter)){
-			caso=2;
+		if (comparador==1){
+			vocal=true;
 		}
-		//if ()
-		//switch (casos)
-		//	case 1: 
+		else{
+			vocal=false;
+		}
+		boolean minus=Character.isLowerCase(caracter);
+		int opcion=0;
+		if (vocal==true && minus==true){
+			opcion=1;
+		}
+		if (vocal==true && minus==false){
+			opcion=2;
+		}
+		switch (opcion){
+			case 1: 
+				System.out.println("El primer caracter es una vocal minuscula");
+				break;
+			case 2:
+				System.out.println("El primer caracter es una vocal mayuscula");
+				break;
+			default:
+				System.out.println("El primer caracter no es una vocal");
+		}
 		// Fin modificacion
 	}
 }

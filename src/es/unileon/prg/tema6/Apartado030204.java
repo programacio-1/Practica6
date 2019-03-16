@@ -26,6 +26,24 @@ public class Apartado030204 extends Apartado {
 		cabecera("01","");
 
 		// Inicio modificacion
+		System.out.println("Introduce un numero");
+		int n1=Teclado.readInteger();
+		System.out.println("Introduce otro numero");
+		int n2=Teclado.readInteger();
+
+		int suma;
+		int i=0;
+		for (i=n1;i<=n2;i++){
+			suma=0;
+			for (int j=n1;j<i;j++){
+				if(i%j==0){
+					suma=suma+j;
+				}
+			}	
+			if (suma==i){
+				System.out.println(i);
+			}
+		}
         // Fin modificacion
 	}
 
@@ -89,6 +107,21 @@ public class Apartado030204 extends Apartado {
 		cabecera("03", "");
 
 		// Inicio modificacion
+		System.out.println("Introduce el tamaño:");
+		int tam=Teclado.readInteger();
+		String cadena="*";
+		System.out.println("Triangulo");
+		for (int i=0;i<tam;i++){
+			System.out.println(cadena);
+		}
+		System.out.println("Cuadrado relleno");
+		for (int i=0;i<tam;i++){
+			System.out.println(cadena);
+		}
+		System.out.println("Cuadrado vacio");
+		for (int i=0;i<tam;i++){
+			System.out.println(cadena);
+		}			
 		// Fin modificacion
 	}
 
@@ -113,6 +146,8 @@ public class Apartado030204 extends Apartado {
 		cabecera("04", "");
 
 		// Inicio modificacion
+		do {
+		int numeroRandom=
 		// Fin modificacion
 	}
 }
