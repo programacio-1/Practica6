@@ -2,7 +2,7 @@ Practica P-CTL
 
 Alumno: Sergio Casado Fernandez
 
-Horas dedicadas: 10h 
+Horas dedicadas: 12h 
 
 Problemas surgidos al realizar la practica:
 
@@ -25,5 +25,7 @@ Apartado 030101 ejercicio 09.
 	El programa no compara dos tipos basicos de datos sino dos objetos por lo que realmente esta comparando las direcciones de memoria de dos objetos, por eso muestra que N1 y N2 son distintos.
 
 Apartado 030101 ejercicio 10.
-	Al compilar la primera vez no funciona ya 
+	En la primera ejecucion ocurre lo mismo que en el ejercicio anterior, el programa compara objetos no valores. Cuando se iguala aux a n1, ambos son lo mismo por eso muestra que lo son.
+
+	Tras la segunda ejecucion el metodo equals no compara los objetos sino el valor de esos objetos por tanto muestra en pantalla que son iguales.
 	

@@ -286,7 +286,7 @@ public class Apartado030101 extends Apartado {
 
 		Rectangulo rectangulo= new Rectangulo(base,altura);
 		// Inicio modificacion
-		
+		System.out.println(rectangulo);
 		// Fin modificacion
 	}
 
