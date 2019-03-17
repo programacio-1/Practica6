@@ -141,20 +141,38 @@ public class NumeroEntero {
 	
 	
 	
-	/* -- Inicio modificacion del ejercicio05 Apartado030202.
-	*int numeroDigitos(){
-	*	
-	*}
-	*
-	*int inverso(){
-	*	
-	*}
-	*
-	*boolean esCapicua(){
-	*	
-	*}
-	* -- Fin modificacion del ejercicio05 Apartado030202.
-	*/
+	// -- Inicio modificacion del ejercicio05 Apartado030202.
+	int numeroDigitos(){
+		
+		String cadena= toString();
+		int salida=0;
+		while(salida!=cadena.length()){
+			salida++;
+		}
+		return salida;
+	}
+	
+	int inverso(){
+		String cadena = String.valueOf(_valor);
+		StringBuffer digito=new StringBuffer();
+		int contador=cadena.length()-1;
+
+		while(contador>=0){
+			digito.append(cadena.charAt(contador));
+			contador--;
+		}
+		cadena=digito.toString();
+		int inverso=Integer.parseInt(digito.toString());
+		return inverso;
+	}
+	
+	boolean esCapicua(){
+		boolean salida=false;
+		salida=(getValor()==inverso());
+		return salida;
+	}
+	// -- Fin modificacion del ejercicio05 Apartado030202.
+	
 	
 	
 	

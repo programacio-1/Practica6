@@ -28,9 +28,27 @@ public class Apartado030202 extends Apartado {
 		cabecera("01","");
 
 		// Inicio modificacion
-		
-		
-		
+		int mayor=0;
+		int menor=0;
+		int cuenta=0;
+		int num=0;
+		while(cuenta!=10){
+			System.out.println("Introduzca un numero");
+			num=Teclado.readInteger();
+			if(cuenta==1){
+				mayor=num;
+				menor=num;
+			}
+			if(num>mayor){
+				mayor=num;
+			}
+			if(num<menor){
+				menor=num;
+			}
+			cuenta++;
+		}
+		System.out.println("El numero mayor es: " + mayor);
+		System.out.println("El numero menor es: " + menor);
 					
         // Fin modificacion
 	}
@@ -45,8 +63,13 @@ public class Apartado030202 extends Apartado {
 		cabecera("02", "");
 
 		// Inicio modificacion
-		
-		
+		int num=7;
+		int numAtras=0;
+		while(num!=0 && numAtras!=num){
+			numAtras=num;
+			System.out.println("Introduzca un numero");	
+			num=Teclado.readInteger();
+		}
 		// Fin modificacion
 	}
 
@@ -66,6 +89,39 @@ public class Apartado030202 extends Apartado {
 		cabecera("03", "");
 
 		// Inicio modificacion
+		NumeroEntero pares=new NumeroEntero();
+		NumeroEntero impares=new NumeroEntero();
+		NumeroEntero n1=new NumeroEntero();
+		NumeroEntero n2=new NumeroEntero();
+		NumeroEntero cuenta=new NumeroEntero();
+
+		System.out.println("Introduzca el primer numero");
+		n1.setValor(Teclado.readInteger());
+		System.out.println("Introduzca el segundo numero");
+		n2.setValor(Teclado.readInteger());
+		cuenta=n1;
+		if(cuenta.getValor()>n2.getValor()){
+			cuenta.decrementar();
+		}
+		else{
+			cuenta.incrementar();
+		}
+		while(cuenta.getValor()!=n2.getValor()){
+			if(cuenta.getValor()%2==0){
+				pares=pares.suma(cuenta);
+			}
+			else{
+				impares=impares.suma(cuenta);
+			}
+			if(cuenta.getValor()>n2.getValor()){
+				cuenta.decrementar();
+			}
+			else{
+				cuenta.incrementar();
+			}
+		}
+		System.out.println("La suma de los numeros pares es: " + pares);
+		System.out.println("La suma de los numeros impares es: " + impares);
 		// Fin modificacion
 	}
 
@@ -81,6 +137,24 @@ public class Apartado030202 extends Apartado {
 		cabecera("04", "");
 
 		// Inicio modificacion
+		float num=0;
+		int numCincos=0;
+		int contador=0;
+		float suma=0;
+		float media=0;
+
+		while(numCincos!=3){
+			contador++;
+			System.out.println("Introduzca un numero");
+			num=Teclado.readInteger();
+			suma = suma + num;
+			if (num==5){
+				numCincos++;
+			}
+		}
+		media=suma/contador;
+		System.out.println("La media de es: " + media);
+		
 		// Fin modificacion
 	}
 
@@ -101,7 +175,13 @@ public class Apartado030202 extends Apartado {
 		cabecera("05","");
 
 		// Inicio modificacion
-        // Fin modificacion
+		NumeroEntero num=new NumeroEntero();
+		System.out.println("Introduzca un numero");
+		num.setValor(Teclado.readInteger());
+		System.out.println("Numero de digitos: " + num.numeroDigitos());
+		System.out.println("Inverso del numero: " + num.inverso());
+		System.out.println("Es capicua: " + num.esCapicua());
+	        // Fin modificacion
 	}
 
 	/**
@@ -142,14 +222,14 @@ public class Apartado030202 extends Apartado {
 		cabecera("06", "");
 		
 		Jugador j1=new Jugador("Federer",5);
-        Jugador j2=new Jugador("Nadal",4);
+        	Jugador j2=new Jugador("Nadal",4);
         
         
-        System.out.println("Los Jugadores del Partido son " + j1.getNombre() + " y "+j2.getNombre());
+		System.out.println("Los Jugadores del Partido son " + j1.getNombre() + " y "+j2.getNombre());
         
-        Partido partido=new Partido(j1,j2);
-        partido.jugar();
-        
-        System.out.println("El ganador es: "+ partido.ganador().getNombre());
+	        Partido partido=new Partido(j1,j2);
+	        partido.jugar();
+	        
+	        System.out.println("El ganador es: "+ 	partido.ganador().getNombre());
 	}
 }
