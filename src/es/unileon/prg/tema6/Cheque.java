@@ -39,9 +39,32 @@ public class Cheque
     {
     	boolean esFalso=false;
     	//Inicio modificacion - ejercicio02() de la clase Apartado030204 -.
-    	
-    	
-    	
+    	int posicion=1;
+	int numeroCeros=0;
+	int numeroNoCeros=0;
+	char numero;
+	char numeroAntes;
+    	numero=_numeroDeCheque.charAt(posicion);
+	do{
+		numeroAntes=numero;
+		numero=_numeroDeCheque.charAt(posicion);
+		if(numero==numeroAntes){
+			if(numero==0){
+				numeroCeros++;
+			}
+			else{
+				numeroNoCeros++;
+			}
+		}
+		else{
+			numeroCeros=numeroNoCeros=1;
+		}
+		posicion++;
+	}
+	while(numeroNoCeros<4 && numeroCeros<3 && posicion!=_DIGITOS);  	
+		if(numeroNoCeros==4 || numeroCeros==3){
+			esFalso=true;
+		}
     	//Fin modificacion - ejercicio02() de la clase Apartado030204 -.
     	return esFalso;
     }   

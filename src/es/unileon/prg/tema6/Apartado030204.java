@@ -64,16 +64,16 @@ public class Apartado030204 extends Apartado {
 
 		Cheque cheque=null;
 		
-		//Modificar el numero de cheque para peobar
+		//Modificar el numero de cheque para probar
 		//cheque=new Cheque("1000988887");    
-        //cheque=new Cheque("1010098888");
-        //cheque=new Cheque("1009808880");   
+        	//cheque=new Cheque("1010098888");
+        	cheque=new Cheque("1004808880");   
         
        
          if (cheque.esFalso()== true)
         	 System.out.println("El cheque es falso");
          else
-             System.out.println("Elche no es falso");
+             System.out.println("El cheque no es falso");
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class Apartado030204 extends Apartado {
 	 * 	****
 	 * 	****
 	 * 	****
-	 *  ****
+	 * 	****
 	 *  
 	 *  Cuadrado vacio
 	 *  ****
@@ -107,21 +107,45 @@ public class Apartado030204 extends Apartado {
 		cabecera("03", "");
 
 		// Inicio modificacion
-		System.out.println("Introduce el tamaño:");
+		System.out.println("Introduce el tamanyo:");
 		int tam=Teclado.readInteger();
-		String cadena="*";
+		char dibujo='*';
 		System.out.println("Triangulo");
-		for (int i=0;i<tam;i++){
-			System.out.println(cadena);
+		for (int i=1;i<=tam;i++){
+			for(int j=1;j<=i;j++){
+				System.out.println(dibujo);
+			}
+			System.out.println("\t");
 		}
+		System.out.println("");
 		System.out.println("Cuadrado relleno");
-		for (int i=0;i<tam;i++){
-			System.out.println(cadena);
-		}
+		int contador=0;
+		do{
+			for(int i=1;i<=tam;i++){
+				System.out.println(dibujo);
+			}
+			System.out.println("\t");
+			contador++;
+		}while(contador<tam);
+		System.out.println("");
 		System.out.println("Cuadrado vacio");
-		for (int i=0;i<tam;i++){
-			System.out.println(cadena);
-		}			
+		int contador2=0;
+		do{
+			if(contador2!=0 && contador2!= tam-1){
+				System.out.println(dibujo);
+				for(int i=2;i<=tam-1;i++){
+					System.out.println(" ");
+				}
+				System.out.println(dibujo);
+			}
+			else{
+				for(int i=1;i<=tam;i++){
+					System.out.println(dibujo);
+				}
+			}
+			System.out.println();
+			contador2++;
+		}while(contador2<tam);		
 		// Fin modificacion
 	}
 
@@ -146,8 +170,43 @@ public class Apartado030204 extends Apartado {
 		cabecera("04", "");
 
 		// Inicio modificacion
+		int numeroRandom=0; 
+		int prueba;
+		int intentos=0;
+		int opcion=0;
 		do {
-		int numeroRandom=
+			numeroRandom = (int) (Math.random()*100)+1;
+			do {
+				intentos=intentos+1;
+				System.out.println("Introduce un numero");
+				prueba=Teclado.readInteger();
+				if (prueba==numeroRandom){
+					System.out.println("Has acertado");					
+					System.out.println("Numero de intentos: " + intentos);
+				}
+				else{
+					if (numeroRandom<prueba){
+						System.out.println("Demasiado grande");
+					}
+					if (numeroRandom>prueba){
+						System.out.println("Demasiado bajo");
+					}
+				}
+			}while((numeroRandom!=prueba) && (intentos<5));
+			System.out.println("1:-Volver a empezar");
+			System.out.println("2:-Salir");
+			opcion=Teclado.readInteger();
+			switch (opcion){
+				case 1: 
+					intentos=0;
+					break;
+				case 2:
+					System.out.println("Hasta la proxima");
+					break;
+				default:
+					System.out.println("Opcion no valida, saliendo");
+			}
+		}while ((opcion==1));
 		// Fin modificacion
 	}
 }

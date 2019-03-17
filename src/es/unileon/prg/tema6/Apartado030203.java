@@ -26,7 +26,24 @@ public class Apartado030203 extends Apartado {
 		cabecera("01","");
 
 		// Inicio modificacion
-        // Fin modificacion
+		int opcion;
+
+		do{
+
+			System.out.println("Seleccione una opcion:");
+			System.out.println("[1]- Bienvenida");
+			System.out.println("[2]- Despedida");
+			System.out.println("[3]- Salir");
+			opcion = Teclado.readInteger();
+			System.out.println("Opcion selecionada ["+opcion+"]");
+			if (opcion>3 || opcion <1) {
+				System.out.println("FATAL ERROR: Opcion not valid");
+			}
+			System.out.println();
+
+		}while(opcion != 3);
+		System.out.println("Hasta la proxima");
+       		// Fin modificacion
 	}
 
 	/**
@@ -42,6 +59,16 @@ public class Apartado030203 extends Apartado {
 		cabecera("02", "");
 
 		// Inicio modificacion
+		int numDado = 0;
+		int numDadoAntes = 0;
+
+		do{
+			numDadoAntes = numDado;
+
+			System.out.println("Introduzca un numero");
+			numDado = Teclado.readInteger();
+
+		}while((numDadoAntes != numDado) && (numDado!=0));
 		// Fin modificacion
 	}
 
@@ -58,6 +85,19 @@ public class Apartado030203 extends Apartado {
 		cabecera("03", "");
 
 		// Inicio modificacion
+		int base;
+		int altura;
+		Rectangulo rectangulo;
+		do{
+
+			System.out.println("Introduzca la base del rectangulo");
+			base = Teclado.readInteger();
+			System.out.println("Introduzca la altura del rectangulo");
+			altura = Teclado.readInteger();
+			rectangulo = new Rectangulo(base, altura);
+			System.out.println(rectangulo.toString());
+			System.out.println();
+		}while(base > 0 && altura > 0);
 		// Fin modificacion
 	}
 
@@ -85,6 +125,26 @@ public class Apartado030203 extends Apartado {
 		cabecera("04", "");
 
 		// Inicio modificacion
+		int numero;
+		int divisor;
+		int sumaDivisores = 0;
+		int contador = 1;
+		System.out.println("Introduzca un numero");
+		numero = Teclado.readInteger();
+
+		do{
+			divisor =  contador;
+			if ( (numero % divisor) == 0 ){
+				sumaDivisores = sumaDivisores + divisor;
+			}
+			contador++;
+		}while(contador < numero);
+		if (sumaDivisores == numero){
+			System.out.println("El "+numero + " es un numero perfecto");
+		}
+		else{
+			System.out.println("El "+numero + " no es un numero perfecto");
+		}
 		// Fin modificacion
 	}
 }
