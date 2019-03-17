@@ -30,20 +30,17 @@ public class Apartado030102 extends Apartado {
 
 		Rectangulo rectangulo=new Rectangulo(10,5);
 		System.out.println("Introduce una opcion (1 - Area, 2 - Perimetro):");
-		/* Inicio modificacion
+		 //Inicio modificacion
 		int opcion = Teclado.readInteger();
-		int base = Rectangulo.getBase;
-		int altura = Rectangulo.getAltura;
 		if (opcion==1){
-			int area=base*altura;
-			System.out.println("El area del rectangulo es " + area);
+			System.out.println("El area del rectangulo es " + rectangulo.getArea());
 		}
 		if (opcion==2){
-			int perimetro=(base*2)+(altura*2);
-			System.out.println("El preimetro del rectangulo es " + perimetro);
+			System.out.println("El preimetro del rectangulo es " + rectangulo.getPerimetro());
 		}
 		// Fin modificacion
-	*/}
+
+	}
 
 	/**
 	 * Instruccion if-else - Ejercicio2.
@@ -99,19 +96,18 @@ public class Apartado030102 extends Apartado {
         NumeroEntero n2 = new NumeroEntero(10);
         
         
-        /*if (n1 > n2){
-        	 System.out.println("N1-> "+n1);
+        if (n1.compareTo(n2)==-1){
+        	 System.out.println("N1 -> "+n1);
              System.out.println("N1 es mayor que N2");
         }
-        else if (n1 < n2) {
+        else if (n1.compareTo(n2) == 1){
             System.out.println("N1 -> "+n1);
             System.out.println("N1 es menor que N2");
         }
         else
-           System.out.println("N1 y N2 son iguales -> N1 ->"+n1+" N2 -> "+n2);
+           System.out.println("N1 y N2 son iguales -> N1 -> "+n1+" N2 -> "+n2);
 		
-		// Fin modificacion
-	*/	
+		// Fin modificacion	
 	}
 
 	/**
@@ -197,7 +193,7 @@ public class Apartado030102 extends Apartado {
 
 		int a, b, c; //Modificar los valores para realizar pruebas o leerlos por teclado
 		
-		/* Inicio modificacion
+		//Inicio modificacion
 		System.out.println("Introduce el primer coeficiente de la x");
 		a=Teclado.readInteger();
 		System.out.println("Introduce el segundo coeficiente de la x");
@@ -207,8 +203,10 @@ public class Apartado030102 extends Apartado {
 
 		Ecuacion2Grado ecuacion=new Ecuacion2Grado(a,b,c);
 
+		System.out.println(ecuacion);
+
        		// Fin modificacion
-	*/}
+	}
 
 	/**
 	 * Instruccion if-else - Ejercicio6.
@@ -222,6 +220,47 @@ public class Apartado030102 extends Apartado {
 		cabecera("06", "");
 
 		// Inicio modificacion
+		int n1,n2,n3;
+		System.out.println("Introduce un numero");
+		n1=Teclado.readInteger();
+		System.out.println("Introduzca el segundo numero");
+		n2=Teclado.readInteger();
+		System.out.println("Introduzca el tercer numero");
+		n3=Teclado.readInteger();
+		if (n1>n2 || n2>n1 || n1>n3 || n3>n1 || n2>n3 || n3>n2){
+			if(n1>n2){
+				System.out.println("El primer numero es maor que el segundo");
+			}
+			if (n2>n1){
+				System.out.println("El segundo nnumero es mayor que el primero");
+			}
+			if (n1>n3){
+				System.out.println("El primer numero es mayor que el tercero");
+			}
+			if (n3>n1){
+				System.out.println("El tercer numero es mayor que el primero");
+			}
+			if (n2>n3){
+				System.out.println("El segundo numero es mayor que el tercero");
+			}
+			if (n3>n2){
+				System.out.println("El tercer numero es mayor que el segundo");
+			}
+		else{
+			if ((n1==n2) && (n2==n3)){
+				System.out.println("Los tres numero son iguales");
+			}
+			if(n1==n2){
+				System.out.println("El primer numero es igual que el segundo");
+			}
+			if (n1==n3){
+				System.out.println("El primer numero es igual que el tercero");
+			}
+			if (n2==n3){
+				System.out.println("El segundo numero es igual al tercero");
+			}
+		}
 		// Fin modificacion
 	}
+}
 }
