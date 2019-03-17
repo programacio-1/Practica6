@@ -41,6 +41,10 @@ public class Rectangulo {
 			base=0;
 			altura=0;
 		}
+		else{
+			_base=base;
+			_altura=altura;
+		}
 		//Fin modificacion ejercicio07		
 	}
 	
@@ -71,8 +75,9 @@ public class Rectangulo {
 	 */
 	public void setBase(int base){
 		//Inicio modificacion ejercicio07
-		if (base>0)
-		setBase(Teclado.readInteger());
+		if (base>0){
+			_base=base;
+		}
 		//Fin modificacion ejercicio07			
 	}
 	
@@ -84,9 +89,9 @@ public class Rectangulo {
 	 */
 	public void setAltura(int altura){
 		//Inicio modificacion ejercicio07
-		int nuevoAltura = Teclado.readInteger();
-		if (altura>0)
-		setAltura(nuevoAltura);
+		if (altura>0){
+			_altura=altura;
+		}
 		//Fin modificacion ejercicio07		
 	}
 	
@@ -102,10 +107,9 @@ public class Rectangulo {
 	public boolean esUnCuadrado(){
 		boolean esUnCuadrado=false;
 		//Inicio modificacion ejercicio07
-		int base= Teclado.readInteger();
-		int altura=Teclado.readInteger();
-		if ((base==altura) && ((base!=0) && (altura!=0)))
-		esUnCuadrado=true;
+		if ((_base==_altura) && ((_base!=0) && (_altura!=0))){
+			esUnCuadrado=true;
+		}
 		//Fin modificacion ejercicio07
 		return esUnCuadrado;
 		
@@ -149,21 +153,34 @@ public class Rectangulo {
 		salida.append("base: "+_base+" ");
 		salida.append("altura: "+_altura+" ");
 		//Inicio modificacion ejercicio07
-		
-		
-		
+		if(esUnCuadrado()==true){
+			salida.append("Es un cuadrado");
+		}
 		//Fin modificacion ejercicio07
 		return salida.toString();	
 		
 	}
 	
-	/* -- Inicio modificacion del ejercicio09 Apartado030201.
-	 * int compareTo(Rectangulo rectangulo){
-	 * 
-	 * 
-	 * }
-	 * -- Fin modificacion del ejercicio09 Apartado030201.
-	 */
+	//-- Inicio modificacion del ejercicio09 Apartado030201.
+	  int compareTo(Rectangulo rectangulo){
+
+		int salida;
+		if(getArea()<rectangulo.getArea()){
+			salida=-1;
+		}
+		else{
+			if(getArea()==rectangulo.getArea()){
+				salida=0;
+			}
+			else{
+				salida=1;
+			}
+		}
+		return salida;
+	  
+	  }
+	// -- Fin modificacion del ejercicio09 Apartado030201.
+	 
 	
 	
 	

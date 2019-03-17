@@ -71,18 +71,28 @@ public class Ecuacion2Grado {
 	*
 	*@return Retorna el numero de soluciones
 	*/
-	public float numeroDeSoluciones(Ecuacion2Grado){
-		float x1, x2;
+	public String numeroDeSoluciones(){
+		double x1=0;
+		double x2=0;
 		int numeroSoluciones=0;
-		x1=((-(b)+(Math.sqrt((Math.pow(b,2)-(4*a*c))))/(2*a)));
-		x2=((-(b)-(Math.sqrt((Math.pow(b,2)-(4*a*c))))/(2*a)));
-		if (x1==x2){
-			numeroSoluciones=1;
+		StringBuffer soluciones=new StringBuffer();
+		if(((Math.pow(_b,2))-(4*_a*_c))>0){
+			x1=(((-_b)+(Math.sqrt((Math.pow(_b,2)-(4*_a*_c))))/(2*_a)));
+			x2=(((-_b)-(Math.sqrt((Math.pow(_b,2)-(4*_a*_c))))/(2*_a)));
+			if (x1==x2){
+				numeroSoluciones=1;
+				soluciones.append("La ecuacion tiene " + numeroSoluciones + "solucion que es " + x1);
+			}
+			else{
+				numeroSoluciones=2;
+				soluciones.append("La ecuacion tiene " + numeroSoluciones + "soluciones que son " + x1 + "y" + x2);
+			}
 		}
 		else{
-			numeroSoluciones=2;
+			numeroSoluciones=0;
+			soluciones.append(" La ecuacion no tiene soluciones");
 		}
-		return numeroSoluciones;
+		return soluciones.toString();
 	}
 
 	/**
@@ -91,10 +101,9 @@ public class Ecuacion2Grado {
 	*/
 	public String toString(){
 		StringBuffer salida=new StringBuffer();
-
-		salida.append("Numero de soluciones " + numeroSoluciones);
-		salida.append("Primera solucion: " + x1);
-		salida.append("Segunda solucion: " + x2);
+		
+		salida.append("La ecuacion "+_a+"*x²"+_b+"*x"+_c+" = 0");
+		salida.append(numeroDeSoluciones());
 
 		return salida.toString();
 	}
